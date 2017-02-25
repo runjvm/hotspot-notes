@@ -1,3 +1,6 @@
+Two types of root oops in universe
+- mirror object oop
+- exception object oop
 
 ```c++
 void Universe::oops_do(OopClosure* f, bool do_all) {
