@@ -3,8 +3,8 @@ Definition
   - A general reference on ["what kind of references are in root sets"](http://stackoverflow.com/questions/6366211/what-are-the-roots).
 
 In HotSpot JVM, there are the following types of root sets.
-  - [universe](root-set-universe.md)
-  - [jni_handles]()
+  - [universe](universe-roots.md)
+  - [jni_handles](jni-handles-roots.md)
   - object_synchronizer
   - flat_profiler
   - managment
