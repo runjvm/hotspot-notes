@@ -5,6 +5,8 @@ For example
 jclass cls = env->FindClass("Main");
 ```
 
+In HotSpot, jobject etc. are called jni handles, and are oop\*. They can be created by `JNIHandleBlock::allocate_handle(oop obj)`, which returns a oop\*. During a GC when the oop pointed by a jni handle is updated, the native code would be using the new oop without modifying the native code. These are root oops because they record the states of native code.
+
 jobject etc. are defined as pointers to empty class.
 
 ```c++
