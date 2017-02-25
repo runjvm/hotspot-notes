@@ -18,7 +18,7 @@ System.out.println(a1.getClass() == a2.getClass()); // prints true
 ```
 My guess is that the corresponding Class object may be created at parse time or created lazily on demand, and only one copy of an object is created for each Java class. a1.getClass() and a2.getClass() are different oops that point to the same object.
 
-
+## HotSpot code
 ```c++
 void Universe::oops_do(OopClosure* f, bool do_all) {  
   f->do_oop((oop*) &_int_mirror);
