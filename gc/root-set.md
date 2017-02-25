@@ -1,6 +1,8 @@
-A general reference on ["what kind of references are in root sets"](http://stackoverflow.com/questions/6366211/what-are-the-roots).
+- Definition
+  - A garbage collection root is an object that is accessible from outside the heap.
+  - A general reference on ["what kind of references are in root sets"](http://stackoverflow.com/questions/6366211/what-are-the-roots).
 
-The reason I refered to these references as root sets instead of root set is that there are more than one set of these references, and a reference can be of more than one type. In HotSpot JVM, there are the following types of root sets.
+In HotSpot JVM, there are the following types of root sets.
 
 - universe
 - jni_handles
