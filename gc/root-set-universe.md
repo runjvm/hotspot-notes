@@ -3,8 +3,21 @@ Two types of roots in universe
   - instance of java.lang.Class, represent a class, see [below](#Java.lang.Class)
   - created by java_lang_Class::create_basic_type_mirror(..)
 - pre-defined exception objects
+  - includes OutOfMemoryError, OutOfMemoryError, OutOfMemoryError..
+  - instance of java.lang.Throwable, which is actually a class instead of an interface
 
 ## Java.lang.Class
+According to Java.lang.Class's source code comment, only the Java Virtual Machine creates Class objects. To create Class objects, Class's klass needs to be created first. These Class objects of primitive types are created as part of SystemDictionary's initialization.
+
+Consider the following code:
+
+```Java
+A a1 = new A();  
+A a2 = new A();
+System.out.println(a1.getClass() == a2.getClass()); // prints true
+```
+My guess is that the corresponding Class object may be created at parse time or created lazily on demand, and only one copy of an object is created for each Java class. a1.getClass() and a2.getClass() are different oops that point to the same object.
+
 
 ```c++
 void Universe::oops_do(OopClosure* f, bool do_all) {  
@@ -19,7 +32,7 @@ void Universe::oops_do(OopClosure* f, bool do_all) {
   f->do_oop((oop*) &_void_mirror);
 
   for (int i = T_BOOLEAN; i < T_VOID+1; i++) {
-    f->do_oop((oop*) &_mirrors[i]);
+    f->do_oop((oop*) &_mirrors[i]); // seems to be repeating the pointers above
   }
   assert(_mirrors[0] == NULL && _mirrors[T_BOOLEAN - 1] == NULL, "checking");
 
