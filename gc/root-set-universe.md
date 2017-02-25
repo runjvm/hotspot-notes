@@ -1,16 +1,13 @@
-Two types of root oops in universe
-- mirror object oop
-- exception object oop
+Two types of roots in universe
+- java.lang.Class objects of primitive types
+  - instance of java.lang.Class, represent a class, see [below](#java.lang.Class)
+  - created by java_lang_Class::create_basic_type_mirror(..)
+- pre-defined exception objects
+
+## Java.lang.Class
 
 ```c++
-void Universe::oops_do(OopClosure* f, bool do_all) {
-  oop* p = &_int_mirror;
-  ParallelScavengeHeap* psh = ParallelScavengeHeap::heap();
-  bool result = psh->young_gen()->is_in(p);
-  tty->print_cr("updating %p in Universe, "
-                "in heap: %d, in young: %d, in old: %d", p, psh->is_in(*p),  psh->young_gen()->is_in(*p), psh->old_gen()->is_in(*p));
-
-  
+void Universe::oops_do(OopClosure* f, bool do_all) {  
   f->do_oop((oop*) &_int_mirror);
   f->do_oop((oop*) &_float_mirror);
   f->do_oop((oop*) &_double_mirror);
@@ -49,4 +46,4 @@ void Universe::oops_do(OopClosure* f, bool do_all) {
 ```
 
 
-java_lang_Class::create_basic_type_mirror
+
