@@ -1,6 +1,6 @@
 Two types of roots in universe
 - java.lang.Class objects of primitive types
-  - instance of java.lang.Class, represent a class, see [below](#java.lang.Class)
+  - instance of java.lang.Class, represent a class, see [below](#Java.lang.Class)
   - created by java_lang_Class::create_basic_type_mirror(..)
 - pre-defined exception objects
 
