@@ -1,6 +1,8 @@
 boolean parameters can be passed as a template parameter, so the value of it can be determined at compile time, 
 the compiler can only keep the if part or the else part.
 
+The parallelScavenge's promotionManager, the bool value prmote_immediately is passed as a template parameter.
+
 ## Example
 ```c++
 template <bool stuff>
@@ -12,12 +14,9 @@ inline void doSomething() {
         cout << "Goodbye" << endl;
     }
 }
-``
-And I call it like this:
-
-doSomething<true>();
-doSomething<false>();
-It would pring out:
-
-Hello
-Goodbye
+```
+call it like this:
+```c++
+doSomething<true>(); // print hello
+doSomething<false>(); // print Goodbye
+```
