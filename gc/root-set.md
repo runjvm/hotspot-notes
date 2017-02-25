@@ -4,7 +4,7 @@ Definition
 
 In HotSpot JVM, there are the following types of root sets.
   - [universe](root-set-universe.md)
-  - jni_handles
+  - [jni_handles]()
   - object_synchronizer
   - flat_profiler
   - managment
