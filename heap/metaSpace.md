@@ -1,0 +1,3 @@
+- MetaSpace memory is collected if it reaches the MaxMetaspaceSize, which by default is unlimited, but can be set.
+- MetaSpace uses native memory and is no longer contiguous to the Java heap
+- java.lang.Class instances are not stored in metaspace or permgen. Metadata stored at metaspace is only used internally by the VM.
