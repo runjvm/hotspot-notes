@@ -6,4 +6,4 @@ More formally, per classloader storage area is called “a metaspace”. And the
 
 The Metaspace VM manages the Metaspace allocation by employing a chunking allocator. The chunking size depends on the type of the classloader. There is a global free list of chunks. Whenever a classloader needs a chunk, it gets it out of this global list and maintains its own chunk list. When any classloader dies, its chunks are freed, and returned back to the global free list. The chunks are further divided into blocks and each block holds a unit of metadata. The allocation of blocks from chunks is linear (pointer bump). The chunks are allocated out of memory mapped (mmapped) spaces. There is a linked list of such global virtual mmapped spaces and whenever any virtual space is emptied, its returned back to the operating system.
 
-!(linked-list)[https://cdn.infoq.com/statics_s1_20170221-0307u1/resource/articles/Java-PERMGEN-Removed/en/resources/2Fig2.jpg]
+![linked-list](https://cdn.infoq.com/statics_s1_20170221-0307u1/resource/articles/Java-PERMGEN-Removed/en/resources/2Fig2.jpg)
