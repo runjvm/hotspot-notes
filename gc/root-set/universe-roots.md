@@ -7,7 +7,20 @@ Two types of roots in universe
   - instance of java.lang.Throwable, which is actually a class instead of an interface
 
 ## Java.lang.Class
-According to Java.lang.Class's source code comment, only the Java Virtual Machine creates Class objects. To create Class objects, Class's klass needs to be created first. These Class objects of primitive types are created as part of SystemDictionary's initialization.
+Instances of the class Class represent classes and interfaces in a running Java application. An enum is a kind of class and an annotation is a kind of interface. Every array also belongs to a class that is reflected as a Class object that is shared by all arrays with the same element type and number of dimensions. The primitive Java types (boolean, byte, char, short, int, long, float, and double), and the keyword void are also represented as Class objects.
+Class has no public constructor. Instead Class objects are constructed automatically by the Java Virtual Machine as classes are loaded and by calls to the defineClass method in the class loader.
+
+The following example uses a Class object to print the class name of an object:
+```Java
+     void printClassName(Object obj) {
+         System.out.println("The class of " + obj +
+                            " is " + obj.getClass().getName());
+     }
+```
+It is also possible to get the Class object for a named type (or for void) using a class literal (JLS Section 15.8.2). For example:
+System.out.println("The name of class Foo is: "+Foo.class.getName());
+
+To create Class objects, Class's klass needs to be created first. These Class objects of primitive types are created as part of SystemDictionary's initialization.
 
 Consider the following code:
 
