@@ -12,10 +12,10 @@ Class has no public constructor. Instead Class objects are constructed automatic
 
 The following example uses a Class object to print the class name of an object:
 ```Java
-     void printClassName(Object obj) {
-         System.out.println("The class of " + obj +
-                            " is " + obj.getClass().getName());
-     }
+void printClassName(Object obj) {
+  System.out.println("The class of " + obj +
+    " is " + obj.getClass().getName());
+}
 ```
 It is also possible to get the Class object for a named type (or for void) using a class literal (JLS Section 15.8.2). For example:
 System.out.println("The name of class Foo is: "+Foo.class.getName());
