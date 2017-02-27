@@ -10,4 +10,5 @@ When a thread arrives at the beginning of a monitor region, it is placed into an
 If a thread arrives at the beginning of a monitor region that is protected by a monitor already owned by another thread, the newly arrived thread must wait in the entry set. When the current owner exits the monitor, the newly arrived thread must compete with any other threads also waiting in the entry set. Only one thread will win the competition and acquire the monitor.
 
 [http://www.artima.com/insidejvm/ed2/threadsynch.html]
+
 [http://www.cnblogs.com/paddix/p/5367116.html]
