@@ -1,3 +1,5 @@
 
 ## Mark Word
-![mark word](https://snag.gy/ZgtiqF.jpg)
+
+<img src="https://snag.gy/ZgtiqF.jpg" width=400>
+
