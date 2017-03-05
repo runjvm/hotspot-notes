@@ -25,7 +25,7 @@ Since most objects are locked by at most one thread during their lifetime, we al
 - Detect if many revocations occurring for a given data type
 - Try invalidating all biases for objects of that type
 
-reference
+## reference
 [https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf]
 [https://blogs.oracle.com/dave/entry/biased_locking_in_hotspot]
 [http://ds.cs.ut.ee/courses/course-files/lockOptimizationHotSpot.pdf]
