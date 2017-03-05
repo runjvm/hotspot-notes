@@ -1,11 +1,11 @@
-jobject, jstring, jclass etc. are used to represent Java objects in C/C++ code.
+jobject, jstring, jclass... are interfaces that are used to represent Java objects in C/C++ code.
 
-For example
+For example in C++ you can do such JNI calls, it returns a jclass type value:
 ```c++
 jclass cls = env->FindClass("Main");
 ```
 
-In HotSpot, jobject etc. are called jni handles, and are oop\*. They can be created by `jobject JNIHandleBlock::allocate_handle(oop obj)`, which returns a oop\*. During a GC when the oop pointed by a jni handle is updated, the native code would be using the new oop without modifying the handle in native code. These are root oops because they record the states of native code.
+In HotSpot, jobject etc. are called jni handles, and are essentially oop\*. They can be created by `jobject JNIHandleBlock::allocate_handle(oop obj)`, which returns a oop\*. During a GC when the oop pointed by a jni handle is updated, the native code would be using the new oop without modifying the handle in native code. These are root oops because they record the states of native code.
 
 In C++' jni.h, jobject etc. are defined as pointers to empty class.
 
