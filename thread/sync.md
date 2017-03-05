@@ -26,6 +26,6 @@ Since most objects are locked by at most one thread during their lifetime, we al
 - Try invalidating all biases for objects of that type
 
 ## Reference
-[https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf]
-[https://blogs.oracle.com/dave/entry/biased_locking_in_hotspot]
-[http://ds.cs.ut.ee/courses/course-files/lockOptimizationHotSpot.pdf]
+- [https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf]
+- [https://blogs.oracle.com/dave/entry/biased_locking_in_hotspot]
+- [http://ds.cs.ut.ee/courses/course-files/lockOptimizationHotSpot.pdf]
