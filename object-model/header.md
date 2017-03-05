@@ -4,8 +4,9 @@
 
 Note that the two tag bits take advantage of the fact that the pointers are at least 4 bytes aligned. So the last two bits will also be 00 when mark word is assigned to a pointer. Then the corresponding tag bit is set, which is called "encoding". When interpreting the mark word as a pointer, the two tag bits are cleared before deferencing.
 
-A detailed layout of 
+A detailed layout
 
+32 bit JVM
 ```
 |----------------------------------------------------------------------------------------|--------------------|
 |                                    Object Header (64 bits)                             |        State       |
@@ -23,3 +24,11 @@ A detailed layout of
 |                                              | lock:2 |      OOP to metadata object    |    Marked for GC   |
 |-------------------------------------------------------|--------------------------------|--------------------|
 ```
+[64 bit JVM](http://arturmkrtchyan.com/java-object-header)
+
+## CompressedOop: 32-bit Represents 32 GB Space
+- 35 bits reference 32 GB of memory
+- The last three bits are always 0 in an oop, 35 - 3 = 32
+- 33 GB heap can't use CompressedOop
+
+The Mark Word part can not be compressed because the pointers are not in the heap.
