@@ -11,3 +11,8 @@
   - If CAS fails, contention: lock inflated (made heavyweight)
 - Lock records track objects locked by currently executing methods
   - Walk thread stack to find thread's locked objects
+- Effective because most locking is uncontended
+
+
+## Heavy-weight Locking
+- OS lock, each object is associated with a [Monitor](https://github.com/runjvm/hotspot-notes/blob/master/java/monitor.md)
