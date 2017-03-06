@@ -33,5 +33,6 @@ Please note also that BiasedLocking is enabled only 4 seconds after startup. You
 - Try invalidating all biases for objects of that type
 
 ## Reference
+- [http://www.oracle.com/technetwork/java/6-performance-137236.html]
 - [https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf]
 - [http://ds.cs.ut.ee/courses/course-files/lockOptimizationHotSpot.pdf]
