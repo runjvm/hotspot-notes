@@ -8,5 +8,3 @@ Volatile type variables are not atomic, thus can not be used as a portable synch
 ## Java
 - Volatile provides atomic read or write on a variable. But it can't make the whole "read-update-write" process atomic.
 - It forces write through everytime, so the update by a thread is also visible to other threads
-
-ee
