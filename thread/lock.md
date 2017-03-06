@@ -37,6 +37,6 @@ Please note also that BiasedLocking is enabled only 4 seconds after startup. You
 - <https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf>
 
 ## General Reference
-- [http://www.oracle.com/technetwork/java/6-performance-137236.html]
-- [https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf]
-- [http://ds.cs.ut.ee/courses/course-files/lockOptimizationHotSpot.pdf]
+- <http://www.oracle.com/technetwork/java/6-performance-137236.html>
+- <https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf>
+- <http://ds.cs.ut.ee/courses/course-files/lockOptimizationHotSpot.pdf>
