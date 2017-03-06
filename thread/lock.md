@@ -13,7 +13,6 @@
   - Walk thread stack to find thread's locked objects
 - Effective because most locking is uncontended
 
-
 ## Heavy-weight Locking
 - OS lock, each object is associated with a [Monitor](https://github.com/runjvm/hotspot-notes/blob/master/java/monitor.md)
 
@@ -31,6 +30,11 @@ Please note also that BiasedLocking is enabled only 4 seconds after startup. You
 ## Bulk Rebiasing and Revocation
 - Detect if many revocations occurring for a given data type
 - Try invalidating all biases for objects of that type
+
+## Lock Elision
+## Loco Coarsening
+## Adaptive Spinning
+- [https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf]
 
 ## Reference
 - [http://www.oracle.com/technetwork/java/6-performance-137236.html]
