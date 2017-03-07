@@ -1,7 +1,7 @@
 
 ## C++
 
-A new expression results in two separate things happening: allocation of the memory needed by the object begin created, and initialization of the object.
+`new` expression in C++ code = `new` operator + call object's constructor.
 
 The new operator just handles the allocation part, then the object's constructor is called.
 
