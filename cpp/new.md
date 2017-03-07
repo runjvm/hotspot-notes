@@ -7,3 +7,7 @@ The new operator just handles the allocation part, then the object's constructor
 There's even something called *placement new*, which initializes object in a preallocated space.
 
 <http://www.cprogramming.com/tutorial/operator_new.html>
+
+## Java
+
+`new` in Java code = `new` + `invokespecial` in bytecode where `new` only allocates memory and `invokespecial` calls a non-virtual method, which is the constructor in this case. 
