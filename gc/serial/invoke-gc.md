@@ -18,12 +18,15 @@ GC call stack in GenCollectedHeap
 	- collect_generation(_young_gen, ..
 		- gen->collect(full, clear_soft_refs, size, is_tlab); // goes to defNewGeneration.cpp
 
+in DefNewGeneration::collect
+
 
 in gc/serial/
 - DefNewGeneration
 	- Serial "default new generation"
     - Inherit from Generation, defines
-    - ContiguousSpace\* _eden_space, _from_space, _to_space;
+    - Real collect routine for young gen
+    - `ContiguousSpace\* _eden_space, _from_space, _to_space;`
 - GenMarkSweep
 	- Inherit class MarkSweep, defines four phases of generational mark and sweep
 - MarkSweep
