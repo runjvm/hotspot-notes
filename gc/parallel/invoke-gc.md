@@ -7,6 +7,8 @@ bool PSScavenge::invoke() {
   if (ScavengeAtRegularIntervals) {
     RegularScavenge::set_collecting(true);
   }
+
+  ParallelScavengeHeap* const heap = ParallelScavengeHeap::heap();
   PSAdaptiveSizePolicy* policy = heap->size_policy();
   IsGCActiveMark mark;
 
@@ -26,7 +28,7 @@ bool PSScavenge::invoke() {
     CollectorPolicy* cp = heap->collector_policy();
     const bool clear_all_softrefs = cp->should_clear_all_soft_refs();
 
-    if (UseParallelOldGC) {
+    if (UseParallelOldGC) { // Default enabled when UseParallelGC is enabled
       tty->print_cr("old");
       full_gc_done = PSParallelCompact::invoke_no_policy(clear_all_softrefs);
     } else {
