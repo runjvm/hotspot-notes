@@ -18,5 +18,9 @@ in gc/serial/
 - MarkSweep
 	- Define small basic operations of mark-sweep, such as iterating oops and updating pointers
 - TenuredGeneration
-	- 
+	- Inherit from Generation
+    
+
+
+
 
