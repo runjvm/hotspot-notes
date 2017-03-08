@@ -4,7 +4,8 @@ Serial GC uses genCollectedHeap, which is in gc/share/, some related classes in 
 	- Base heap; Both genCollectedHeap and ParallelScavengeHeap inherit from it
 - GenCollectedHeap
 	- Inherit from collectedHeap, defines members like
-    - Generation\* _young_gen, _old_gen;
+    - `Generation\* _young_gen, _old_gen;`
+    - Actual allocation and GC invocation routine is defined in GenCollectorPolicy
 - Generation
 	- Base class for serial defNewGeneration, tenuredGeneration
 - GenCollectorPolicy
