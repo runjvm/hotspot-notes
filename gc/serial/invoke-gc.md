@@ -7,7 +7,7 @@ Serial GC uses genCollectedHeap, which is in gc/share/, some related classes in 
 	- Base heap; Both genCollectedHeap and ParallelScavengeHeap inherit from it
 - GenCollectedHeap
 	- Inherit from collectedHeap, defines members like
-    - `Generation\* _young_gen, _old_gen;`
+    - `Generation* _young_gen, _old_gen;`
     - Actual allocation and GC invocation routine is defined in GenCollectorPolicy
 - Generation
 	- Base class for serial defNewGeneration, tenuredGeneration
@@ -22,7 +22,7 @@ Serial GC uses genCollectedHeap, which is in gc/share/, some related classes in 
 	- Serial "default new generation"
     - Inherit from Generation, defines
     - Real collect routine for young gen
-    - `ContiguousSpace\* _eden_space, _from_space, _to_space;`
+    - `ContiguousSpace* _eden_space, _from_space, _to_space;`
 - GenMarkSweep
 	- Inherit class MarkSweep, defines four phases of generational mark and sweep
 - MarkSweep
