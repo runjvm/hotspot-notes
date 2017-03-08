@@ -10,13 +10,12 @@ Serial GC uses genCollectedHeap, which is in gc/share/, some related classes in 
 
 in gc/serial/
 - DefNewGeneration
-	- serial "default new generation"
-    - inherit from Generation, defines
-    - ContiguousSpace\* _eden_space, _from_space, _to_space;
+	- Serial "default new generation"
+    - Inherit from Generation, defines
 - GenMarkSweep
-	- inherit class MarkSweep, defines four phases of generational mark and sweep
+	- Inherit class MarkSweep, defines four phases of generational mark and sweep
 - MarkSweep
-	- define small basic operations of mark-sweep, such as iterating oops and updating pointers
+	- Define small basic operations of mark-sweep, such as iterating oops and updating pointers
 - TenuredGeneration
 	- 
 
