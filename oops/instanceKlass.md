@@ -1,5 +1,5 @@
 
-OopMaps are filled as fields are [parsed](https://github.com/runjvm/hotspot-notes/blob/master/classfile/field-parser.md) at load time.
+OopMaps are filled as fields are [parsed](classfile/field-parser.md) at load time.
 
 Pseudocode for oop_iterate
 
