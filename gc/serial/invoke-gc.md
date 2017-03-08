@@ -23,6 +23,7 @@ in DefNewGeneration::collect
 - evacuate_followers.do_void()
 	- DefNewGeneration::oop_since_save_marks_iterate##nv_suffix(OopClosureType\* cl)
     	- ContiguousSpace::oop_since_save_marks_iterate##nv_suffix( // in gc/share/space.cpp
+        	- oopDesc::oop_iterate(.. // in oops/oop_iterate(..
 
 in gc/serial/
 - DefNewGeneration
