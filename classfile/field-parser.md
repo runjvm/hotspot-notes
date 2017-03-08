@@ -31,6 +31,7 @@ for (AllFieldStream fs(_fields, _cp); !fs.done(); fs.next()) {
                 
             }
         }
+        ...
     }
 
 }
