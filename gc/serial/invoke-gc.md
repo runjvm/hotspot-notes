@@ -19,7 +19,10 @@ GC call stack in GenCollectedHeap
 		- gen->collect(full, clear_soft_refs, size, is_tlab); // goes to defNewGeneration.cpp
 
 in DefNewGeneration::collect
-
+- gch->gen_process_roots(..
+- evacuate_followers.do_void()
+	- DefNewGeneration::oop_since_save_marks_iterate##nv_suffix(OopClosureType\* cl)
+    	- ContiguousSpace::oop_since_save_marks_iterate##nv_suffix( // in gc/share/space.cpp
 
 in gc/serial/
 - DefNewGeneration
