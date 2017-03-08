@@ -1,5 +1,5 @@
 
-CollectedHeap tries to call itself's allocate_from_tlab. If that fails or if UseTLAB is off, it calls derived mem_allocate method.
+CollectedHeap tries to call itself's allocate_from_tlab. If that fails or if UseTLAB is off, it calls derived mem_allocate method. Both GenCollectedHeap and ParallelScavengeHeap implemented mem_allocate.
 
 ```c++
 HeapWord* CollectedHeap::common_mem_allocate_noinit(KlassHandle klass, size_t size, TRAPS) {
