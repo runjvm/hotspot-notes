@@ -16,6 +16,7 @@ Serial GC uses genCollectedHeap, which is in gc/share/, some related classes in 
 GC call stack in GenCollectedHeap
 - GenCollectedHeap::do_collection( ..
 - collect_generation(_young_gen, ..
+- gen->collect(full, clear_soft_refs, size, is_tlab);
 
 
 in gc/serial/
