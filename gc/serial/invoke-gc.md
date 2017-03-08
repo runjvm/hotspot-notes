@@ -25,6 +25,7 @@ in DefNewGeneration::collect
     	- ContiguousSpace::oop_since_save_marks_iterate##nv_suffix( // in gc/share/space.cpp
         	- oopDesc::oop_iterate(.. // in oops/oop.inline.hpp
             	- klass()->oop_oop_iterate##nv_suffix(this, blk);
+                	- oop_oop_iterate_oop_maps<nv>(obj, closure); // see (this)[oops/instanceKlass.md]
 
 in gc/serial/
 - DefNewGeneration
