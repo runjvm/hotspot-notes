@@ -7,7 +7,6 @@ bool PSScavenge::invoke() {
   if (ScavengeAtRegularIntervals) {
     RegularScavenge::set_collecting(true);
   }
-
   ParallelScavengeHeap* const heap = ParallelScavengeHeap::heap();
   PSAdaptiveSizePolicy* policy = heap->size_policy();
   IsGCActiveMark mark;
