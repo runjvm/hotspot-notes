@@ -12,6 +12,7 @@ in gc/serial/
 - DefNewGeneration
 	- Serial "default new generation"
     - Inherit from Generation, defines
+    - ContiguousSpace\* _eden_space, _from_space, _to_space;
 - GenMarkSweep
 	- Inherit class MarkSweep, defines four phases of generational mark and sweep
 - MarkSweep
