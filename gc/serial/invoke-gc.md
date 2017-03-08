@@ -16,7 +16,7 @@ Serial GC uses genCollectedHeap, which is in gc/share/, some related classes in 
     - Defines actual `satisfy_failed_allocation`, which is called as VMOperation
     - `satisfy_failed_allocation` is like PSHeap's `failed_mem_allocate`, they both invoke GC and has a policy to determine if full GC is needed
     
-## Classes in gc/serial
+## Classes in gc/serial/
 
 - DefNewGeneration
 	- Serial "default new generation"
