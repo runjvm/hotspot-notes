@@ -39,15 +39,8 @@ Serial GC uses genCollectedHeap, which is in gc/share/, some related classes in 
 in DefNewGeneration::collect
 - gch->gen_process_roots(..
 - evacuate_followers.do_void()
-	- DefNewGeneration::oop_since_save_marks_iterate##nv_suffix(OopClosureType\* cl)
+	- GenCollectedHeap::oop_since_save_marks_iterate(..
     	- ContiguousSpace::oop_since_save_marks_iterate##nv_suffix( // in gc/share/space.cpp
         	- oopDesc::oop_iterate(.. // in oops/oop.inline.hpp
             	- klass()->oop_oop_iterate##nv_suffix(this, blk);
                 	- oop_oop_iterate_oop_maps<nv>(obj, closure); // see [this](../../oops/instanceKlass.md)
-
-
-    
-
-
-
-
