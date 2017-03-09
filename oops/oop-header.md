@@ -26,7 +26,17 @@ A detailed layout
 ```
 [64 bit JVM](http://arturmkrtchyan.com/java-object-header)
 
-Strictly
+```c++
+class oopDesc {
+	volatile markOop* _mark;
+    union {
+    	Klass* _klass;
+        NarrowKlass _compressed_klass;
+    }
+    ...
+}
+```
+NarrowKlass is typedef as jint. It's compressed the same way as NarrowOop.
 
 ## CompressedOop: 32-bit Represents 32 GB Space
 - 35 bits reference 32 GB of memory
