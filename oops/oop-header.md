@@ -26,6 +26,8 @@ A detailed layout
 ```
 [64 bit JVM](http://arturmkrtchyan.com/java-object-header)
 
+Strictly
+
 ## CompressedOop: 32-bit Represents 32 GB Space
 - 35 bits reference 32 GB of memory
 - The last three bits are always 0 in an oop, 35 - 3 = 32
