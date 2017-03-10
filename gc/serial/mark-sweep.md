@@ -1,3 +1,2 @@
-## A New Post
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+void CompactibleSpace::scan_and_compact(SpaceType* space)
