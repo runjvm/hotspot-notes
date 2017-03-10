@@ -9,7 +9,15 @@ HeapWord* ParallelScavengeHeap::mem_allocate(
   ...
 ```
 
-Call chain
+## Filler Object
+
+Filler objects are instances of java_lang_Object. Appendix of well-known classes:
+
+SystemDictionary::Object_klass() => java_lang_Object
+SystemDictionary::Class_klass()  => java_lang_Class
+... etc
+
+## Call chain
 
 - instanceOop InstanceKlass::allocate_instance(TRAPS)
   - CollectedHeap::obj_allocate(h_k, size, CHECK_NULL)
