@@ -9,6 +9,11 @@ HeapWord* ParallelScavengeHeap::mem_allocate(
   ...
 ```
 
+Call chain
+
+- instanceOop InstanceKlass::allocate_instance(TRAPS)
+  - CollectedHeap::obj_allocate(h_k, size, CHECK_NULL)
+    
 
 ```c++
 
@@ -145,9 +150,6 @@ HeapWord* CollectedHeap::allocate_from_tlab(KlassHandle klass, Thread* thread, s
    }
    return NULL;
  }
-
-
-
 
 
 
