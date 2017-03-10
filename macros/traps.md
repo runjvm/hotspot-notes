@@ -12,4 +12,4 @@ instanceOop InstanceKlass::allocate_instance(TRAPS) {
   KlassHandle h_k(THREAD, this);
   ...
 }
-```
+`
