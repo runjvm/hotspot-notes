@@ -1,4 +1,4 @@
-!()[https://cdn.discordapp.com/attachments/298832757327659008/298832899006791682/unknown.png]
+![](https://cdn.discordapp.com/attachments/298832757327659008/298832899006791682/unknown.png)
 
 - Primordial thread
   - The initial thread of HotSpot VM. Because this thread is created by the OS, HotSpot can't control the size of it's stack accurately, so this thread doesn't do much things. Pretty much the only thing it does is to create a new thread as Java's main thread and wait for joining, then exits.
