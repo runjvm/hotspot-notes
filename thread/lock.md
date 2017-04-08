@@ -32,7 +32,7 @@ Please note also that BiasedLocking is enabled only 4 seconds after startup. You
 - Try invalidating all biases for objects of that type
 
 ## Lock Elision
-## Loco Coarsening
+## Lock Coarsening
 ## Adaptive Spinning
 - <https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf>
 
