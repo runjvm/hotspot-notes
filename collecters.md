@@ -39,7 +39,9 @@ They are both parallel collectors for young gen. ParNewGC works with CMS but Par
 
 - -XX:+UseConcMarkSweepGC
 	- -XX:+UseParNewGC is enabled automatically
-
+    - Parallel for young gen, CMS for old gen
+- -XX:+UseConcMarkSweepGC -XX:-UseParNewGC
+	- 
 
 
 ## GC call stack in GenCollectedHeap
