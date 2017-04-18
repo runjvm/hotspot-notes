@@ -46,14 +46,17 @@ They are both parallel collectors for young gen. ParNewGC works with CMS but Par
 - -XX:+UseParallelGC
 	- -XX:+UseParallelOldGC is automatically on after JDK 7u4
 
-The CMS collector
-The G1 collector
+### The CMS collector
 
 - -XX:+UseConcMarkSweepGC
 	- -XX:+UseParNewGC is enabled automatically
     - Parallel for young gen, CMS for old gen
 - -XX:+UseConcMarkSweepGC -XX:-UseParNewGC
 	- Serial (DefNew) for young gen, CMS for old gen
+    
+### G1 collector
+
+- -XX:+UseG1GC
     
 
 
