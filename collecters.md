@@ -57,6 +57,11 @@ They are both parallel collectors for young gen. ParNewGC works with CMS but Par
 ### G1 collector
 
 - -XX:+UseG1GC
+
+
+## Default Collector
+
+Up to Java 8, Use 
     
 
 
