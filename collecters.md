@@ -61,7 +61,11 @@ They are both parallel collectors for young gen. ParNewGC works with CMS but Par
 
 ## Default Collector
 
-Up to Java 8, Use 
+The default collector is [platform-dependent](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/parallel.html#CHDCFBIF).
+
+The rule on this Java 5 page is still applicable in Java 7 and Java 8:
+
+On server-class machines running the server VM, the garbage collector (GC) has changed from the previous serial collector (-XX:+UseSerialGC) to a parallel collector (-XX:+UseParallelGC).
     
 
 
