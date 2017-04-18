@@ -37,11 +37,25 @@ Serial GC uses genCollectedHeap, which is in gc/share/, some related classes in 
 
 They are both parallel collectors for young gen. ParNewGC works with CMS but ParallelScavenge does not. For other discrepancies between the two, refer to [this post](http://hllvm.group.iteye.com/group/topic/37095).
 
+### Serial garbage collector
+
+- -XX:+UseSerialGC
+
+### Throughput collector
+
+- -XX:+UseParallelGC
+	- -XX:+UseParallelOldGC is automatically on after JDK 7u4
+
+The CMS collector
+The G1 collector
+
 - -XX:+UseConcMarkSweepGC
 	- -XX:+UseParNewGC is enabled automatically
     - Parallel for young gen, CMS for old gen
 - -XX:+UseConcMarkSweepGC -XX:-UseParNewGC
-	- 
+	- Serial (DefNew) for young gen, CMS for old gen
+    
+
 
 
 ## GC call stack in GenCollectedHeap
