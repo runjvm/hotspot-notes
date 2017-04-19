@@ -58,6 +58,12 @@ They are both parallel collectors for young gen. ParNewGC works with CMS but Par
 
 - -XX:+UseG1GC
 
+### Reference
+
+[Oracle JVM Garbage Collectors Available From JDK 1.7.0_04 And After](http://www.fasterj.com/articles/oraclecollectors1.shtml)
+
+[An older reference from Alexey Rogozin](http://blog.ragozin.info/2011/07/hotspot-jvm-garbage-collection-options.html)
+
 
 ## Default Collector
 
