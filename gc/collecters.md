@@ -45,9 +45,9 @@ They are both parallel collectors for young gen. ParNewGC works with CMS but Par
 
 - -XX:+UseParallelGC
 	- -XX:+UseParallelOldGC is automatically on after JDK 7u4
-    - PSScavenge + PSParallelCompact (both parallel)
+    - `PSScavenge` + `PSParallelCompact` (both parallel)
 - -XX:+UseParallelGC -XX:-UseParallelOldGC
-	- PSScavenge (parallel) + PSMarkSweep (serial mark-sweep-compact collector)
+	- `PSScavenge` (parallel) + `PSMarkSweep` (serial mark-sweep-compact collector)
 
 ### The CMS collector
 
