@@ -21,6 +21,14 @@ SystemDictionary::Class_klass()  => java_lang_Class
 
 - instanceOop InstanceKlass::allocate_instance(TRAPS)
   - CollectedHeap::obj_allocate(h_k, size, CHECK_NULL)
+  	- CollectedHeap::common_mem_allocate_init(KlassHandle klass, size_t size, TRAPS)
+    	- CollectedHeap::common_mem_allocate_noinit
+            - CollectedHeap::allocate_from_tlab(klass, THREAD, size) // when success
+        		- CollectedHeap::allocate_from_tlab_slow(KlassHandle klass, Thread\* thread, size_t size)
+       		- Universe::heap()->mem_allocate() // failed allocating from tlab, lead to GC
+        - CollectedHeap::init_obj
+
+        
     
 
 ```c++
@@ -262,20 +270,3 @@ oop CollectedHeap::obj_allocate(KlassHandle klass, int size, TRAPS) {
 
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
