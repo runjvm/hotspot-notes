@@ -26,7 +26,7 @@ SystemDictionary::Class_klass()  => java_lang_Class
             - CollectedHeap::allocate_from_tlab(klass, THREAD, size) // when success
         		- CollectedHeap::allocate_from_tlab_slow(KlassHandle klass, Thread\* thread, size_t size)
        		- Universe::heap()->mem_allocate() // failed allocating from tlab, lead to GC
-        - CollectedHeap::init_obj
+        - CollectedHeap::init_obj(HeapWord\* obj, size_t size) {
 
         
     
