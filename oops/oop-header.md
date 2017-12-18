@@ -2,9 +2,9 @@
 
 <img src="https://snag.gy/ZgtiqF.jpg" width=500>
 
-Note that the two tag bits take advantage of the fact that the pointers are at least 4 bytes aligned. So the last two bits will also be 00 when mark word is assigned to a pointer. Then the corresponding tag bit is set, which is called "encoding". When interpreting the mark word as a pointer, the two tag bits are cleared before deferencing.
+Note that the two tag bits take advantage of the fact that the pointers are at least 4 bytes aligned (primitive types are aligned according to their sizes). So the last two bits will also be 00 when mark word is assigned to a pointer. Then the corresponding tag bit is set, which is called "encoding". When interpreting the mark word as a pointer, the two tag bits are cleared before deferencing.
 
-A detailed layout
+### Header Layout
 
 32 bit JVM
 ```
