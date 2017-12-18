@@ -54,4 +54,9 @@ If `UseCompressedClassPointers` is on then amount of space available for class m
 
 If amount of space available for class metadata is exceeds `CompressedClassSpaceSize`, then java.lang.OutOfMemoryError Compressed class space is thrown.
 
+## Array
+All arrays have an extra integer "length" field stored in their header, which means that an array's header uses 24 bytes even if it has no data - 16 bytes for header, 4 bytes for integer length, and 4 bytes for padding. What about int array?
 
+## Reference
+http://btoddb-java-sizing.blogspot.com/
+http://xmlandmore.blogspot.com/2014/08/jdk-8-usecompressedclasspointers-vs.html
