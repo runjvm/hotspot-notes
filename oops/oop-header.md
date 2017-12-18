@@ -38,9 +38,10 @@ class oopDesc {
 ```
 narrowKlass is typedef as jint. It's compressed the same way as narrowOop.
 
-## CompressedOop: 32-bit Represents 32 GB Space
+## CompressedOops: 32-bit Represents 32 GB Space
 - 35 bits reference 32 GB of memory
-- The last three bits are always 0 in an oop, 35 - 3 = 32
+- needs to be scaled by a factor of 8 and added to the heap base address to find the object to which they refer
+- CompressedOops can reference up to 32 GB
 - 33 GB heap can't use CompressedOop
 
-The Mark Word part can not be compressed because the pointers are not in the heap.
+The Mark Word part can not be compressed because the pointers contained in the mark word are native. By contrast, the managed pointers only need to reference 32 GB, instead of the whole native heap.
