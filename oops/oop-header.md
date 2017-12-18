@@ -48,3 +48,10 @@ narrowKlass is typedef as jint. It's compressed the same way as narrowOop.
 In the current version (as in Dec. 2017) of Java, `UseCompressedOops` has to be on in order to use `UseCompressedClassPointers`. Compressing class pointers are implemented the same way as compressing oops, there is a narrow klass base. Someone proposed [this](https://bugs.openjdk.java.net/browse/JDK-6916625) issue to use `UseCompressedClassPointers` (if Perm Gen size < 4GB) even when `UseCompressedOops` is not applicable. 
 
 By contrast, the Mark Word part can not be compressed because the pointers contained in the mark word are not allocated in this "base+offset\*8" fashion as with klass and oops. 
+
+### OutOfMemoryError: Compressed class space  
+If `UseCompressedClassPointers` is on then amount of space available for class metadata is fixed (i.e. specified by vm option)
+
+If amount of space available for class metadata is exceeds `CompressedClassSpaceSize`, then java.lang.OutOfMemoryError Compressed class space is thrown.
+
+
