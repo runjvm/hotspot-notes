@@ -13,6 +13,6 @@ For compiled code, JIT inserts safepoint checks in code at certain points (usual
 Safepoint status check itself is implemented in very cunning way. Normal memory variable check would require expensive memory barriers. Though, safepoint check is implemented as memory reads a barrier. Then safepoint is required, JVM unmaps page with that address provoking page fault on application thread (which is handled by JVM’s handler). This way, HotSpot maintains its JITed code CPU pipeline friendly, yet ensures correct memory semantic (page unmap is forcing memory barrier to processing cores).
 
 ## Reference
-- [http://blog.ragozin.info/2012/10/safepoints-in-hotspot-jvm.html]()
-- [http://chriskirk.blogspot.com/2013/09/what-is-java-safepoint.html]()
+- [http://blog.ragozin.info/2012/10/safepoints-in-hotspot-jvm.html](http://blog.ragozin.info/2012/10/safepoints-in-hotspot-jvm.html)
+- [http://chriskirk.blogspot.com/2013/09/what-is-java-safepoint.html](http://chriskirk.blogspot.com/2013/09/what-is-java-safepoint.html)
 
