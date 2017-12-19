@@ -15,4 +15,5 @@ Safepoint status check itself is implemented in very cunning way. Normal memory 
 ## Reference
 - [http://blog.ragozin.info/2012/10/safepoints-in-hotspot-jvm.html](http://blog.ragozin.info/2012/10/safepoints-in-hotspot-jvm.html)
 - [http://chriskirk.blogspot.com/2013/09/what-is-java-safepoint.html](http://chriskirk.blogspot.com/2013/09/what-is-java-safepoint.html)
+- https://stackoverflow.com/questions/16558746/what-mechanism-jvm-use-to-block-threads-during-stop-the-world-pause
 
